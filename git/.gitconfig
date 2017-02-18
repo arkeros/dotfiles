@@ -1,8 +1,17 @@
-[http]
-	postBuffer = 524288000
+# git-config man page: https://www.kernel.org/pub/software/scm/git/docs/git-config.html
+
 [user]
 	name = arkeros
 	email = rafael@arque.ro
+	
 [core]
-	excludesfile = /Users/arkeros/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	compression = 9
+	# Prevent line ending issues--change to 'true' on Windows
 	autocrlf = input
+	
+[alias]
+	yolo = !sh -c 'git commit -am "DEAL WITH IT" && git push -f origin master'
+	
+[hub]
+	protocol = ssh # Github uses https by default
