@@ -1,3 +1,11 @@
+#!/bin/sh
+
+# Ask for the administrator password upfront
+sudo -v
+
+echo "› sudo softwareupdate -i -a"
+sudo softwareupdate -i -a
+
 # Check for Homebrew
 if test ! $(which brew)
 then
