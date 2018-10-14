@@ -29,4 +29,11 @@ nvm install 10
 
 # stow
 stow -t ~ git
-# stow -t ~/code/awesome-project fisher
+stow -t ~/Library/Application\ Support/Code/User vscode
+
+# vscode
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension eg2.tslint
+code --install-extension mauve.terraform
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension PeterJausovec.vscode-docker
