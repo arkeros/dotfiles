@@ -21,7 +21,7 @@ fish
 fisher add edc/bass
 
 # nvm
-echo "Install NVM"
+echo "› install nvm"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 bass source ~/.nvm/nvm.sh --no-use
 nvm install 10
@@ -30,9 +30,3 @@ nvm install 10
 # stow
 stow -t ~ git
 # stow -t ~/code/awesome-project fisher
-
-# Change hostname
-sudo scutil --set ComputerName "mbp"
-sudo scutil --set LocalHostName "mbp"
-sudo scutil --set HostName "mbp"
-# dscacheutil -flushcache

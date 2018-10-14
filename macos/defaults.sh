@@ -7,6 +7,7 @@ sudo scutil --set ComputerName "$COMPUTER_NAME"
 sudo scutil --set HostName "$COMPUTER_NAME"
 sudo scutil --set LocalHostName "$COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
+# dscacheutil -flushcache
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "es"
