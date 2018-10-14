@@ -14,9 +14,6 @@ fi
 
 brew bundle
 
-git config --global user.email "rafael@arquero.cat"
-git config --global user.name "Rafael Arquero"
-
 # Fisher
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
@@ -28,11 +25,11 @@ echo "Install NVM"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 bass source ~/.nvm/nvm.sh --no-use
 nvm install 10
-nvm use 10
+# nvm use 10
 
 # stow
-stow fisher
-stow git
+stow -t ~ git
+# stow -t ~/code/awesome-project fisher
 
 # Change hostname
 sudo scutil --set ComputerName "mbp"
