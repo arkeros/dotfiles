@@ -46,3 +46,9 @@ code --install-extension eg2.tslint
 code --install-extension mauve.terraform
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension PeterJausovec.vscode-docker
+code --install-extension dbaeumer.jshint
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension christian-kohler.path-intellisense
+code --install-extension eg2.vscode-npm-script
+code --install-extension esbenp.prettier-vscode
+code --install-extension msjsdiag.debugger-for-chrome
