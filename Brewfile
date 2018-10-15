@@ -5,9 +5,6 @@ tap "homebrew/core"
 cask "xquartz"
 brew "dockutil"
 brew "ack"
-brew "awscli"
-brew "packer"
-brew "terraform"
 brew "aircrack-ng"
 brew "binutils"
 brew "p7zip"
@@ -22,6 +19,7 @@ brew "findutils"
 brew "fish"
 brew "foremost"
 brew "git"
+brew "git-flow"
 brew "git-lfs"
 brew "gnu-sed", args: ["with-default-names"]
 brew "gnupg"
@@ -30,6 +28,7 @@ brew "cabal-install"
 brew "go"
 brew "grc"
 brew "grep"
+brew "hub"
 brew "hashpump"
 brew "hydra"
 brew "imagemagick", args: ["with-webp"]
@@ -37,7 +36,6 @@ brew "john"
 brew "jp2a"
 brew "jq"
 brew "knock"
-brew "kubernetes-cli"
 brew "libcaca", args: ["with-imlib2"]
 brew "libgit2"
 brew "lua"
@@ -70,12 +68,8 @@ brew "woff2"
 brew "xpdf"
 brew "youtube-dl"
 brew "zopfli"
-brew "bramstein/webfonttools/sfnt2woff"
-brew "bramstein/webfonttools/sfnt2woff-zopfli"
 cask "discord"
-cask "docker"
-cask "virtualbox"
-cask "vagrant"
+cask 'dash'
 cask "expressvpn"
 cask "firefox"
 cask "gitup"
@@ -86,5 +80,32 @@ cask "iterm2"
 cask "slack"
 cask "telegram"
 cask "transmission"
+cask 'skype'
+cask 'charles'
 cask "visual-studio-code"
+cask "jetbrains-toolbox"
 cask "vlc"
+# mas "Todoist: Organize your life", id: 585829637
+# mas "Toggl Desktop", id: 957734279
+
+# mobile dev
+cask "android-studio"
+cask "android-sdk"
+# mas "Xcode", id: 497799835
+
+# devops
+brew "awscli"
+brew "packer"
+brew "terraform"
+brew "kubernetes-cli"
+cask "docker"
+cask "virtualbox"
+cask "vagrant"
+cask "now"
+
+# Fonts
+tap "caskroom/fonts"
+brew "bramstein/webfonttools/sfnt2woff"
+brew "bramstein/webfonttools/sfnt2woff-zopfli"
+cask 'font-source-code-pro'
+cask 'font-inconsolata'
