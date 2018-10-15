@@ -13,6 +13,15 @@ then
 fi
 
 brew bundle
+brew install yarn --without-node
+
+# https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver 
+curl -Lo docker-machine-driver-hyperkit https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-hyperkit \
+&& chmod +x docker-machine-driver-hyperkit \
+&& sudo cp docker-machine-driver-hyperkit /usr/local/bin/ \
+&& rm docker-machine-driver-hyperkit \
+&& sudo chown root:wheel /usr/local/bin/docker-machine-driver-hyperkit \
+&& sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
 
 # Fisher
 echo /usr/local/bin/fish | sudo tee -a /etc/shells

@@ -95,13 +95,16 @@ cask "android-sdk"
 
 # devops
 brew "awscli"
+cask "google-cloud-sdk"
 brew "packer"
 brew "terraform"
 brew "kubernetes-cli"
+brew "kubernetes-helm"
 cask "docker"
-cask "virtualbox"
-cask "vagrant"
+cask "minikube"
 cask "now"
+tap "azure/draft"
+brew "draft"
 
 # Fonts
 tap "caskroom/fonts"
