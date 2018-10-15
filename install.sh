@@ -18,14 +18,14 @@ brew bundle
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fisher add edc/bass
 
 # nvm
 echo "› install nvm"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-bass source ~/.nvm/nvm.sh --no-use
-nvm install 10
-# nvm use 10
+bass source ~/.nvm/nvm.sh --no-use ';' nvm install 10
+# bass source ~/.nvm/nvm.sh --no-use ';' nvm use 10
 
 # stow
 stow -t ~ git
