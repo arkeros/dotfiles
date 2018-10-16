@@ -88,6 +88,9 @@ cask "vlc"
 # mas "Todoist: Organize your life", id: 585829637
 # mas "Toggl Desktop", id: 957734279
 
+# web dev
+brew "protobuf"
+
 # mobile dev
 cask "android-studio"
 cask "android-sdk"
@@ -99,6 +102,7 @@ cask "google-cloud-sdk"
 brew "packer"
 brew "terraform"
 brew "kubernetes-cli"
+brew "kops"
 brew "kubernetes-helm"
 cask "docker"
 cask "minikube"
