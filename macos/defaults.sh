@@ -73,6 +73,12 @@ defaults write com.apple.screencapture type -string "png"
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+#  "Enable subpixel font rendering on non-Apple LCDs"
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# "Enable HiDPI display modes (requires restart)"
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -109,6 +115,30 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+###############################################################################
+# Safari                                                                      #
+###############################################################################
+
+#"Enabling Safari's debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+#"Making Safari's search banners default to Contains instead of Starts With"
+# defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+#"Removing useless icons from Safari's bookmarks bar"
+# defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+
+#"Allow hitting the Backspace key to go to the previous page in history"
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+#"Enabling the Develop menu and the Web Inspector in Safari"
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+
+#"Adding a context menu item for showing the Web Inspector in web views"
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 ###############################################################################
 # Calendar                                                                    #
