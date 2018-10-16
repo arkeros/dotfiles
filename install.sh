@@ -52,3 +52,4 @@ code --install-extension christian-kohler.path-intellisense
 code --install-extension eg2.vscode-npm-script
 code --install-extension esbenp.prettier-vscode
 code --install-extension msjsdiag.debugger-for-chrome
+code --install-extension zxh404.vscode-proto3
