@@ -69,6 +69,7 @@ brew "woff2"
 brew "xpdf"
 brew "youtube-dl"
 brew "zopfli"
+brew "kafkacat"
 cask "discord"
 cask "slack"
 cask 'dash'
