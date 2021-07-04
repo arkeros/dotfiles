@@ -1,11 +1,18 @@
 #!/bin/sh
 export DEBIAN_FRONTEND=noninteractive
 
-apt-get update
-apt-get install -y fish neovim stow tree git make
+SUDO=''
+if (( id -u )); then
+	    SUDO='sudo'
+	    # Ask for the administrator password upfront
+	    sudo -v
+fi
+
+$SUDO apt-get update
+$SUDO apt-get install -y fish neovim stow tree git make
 
 # Fisher
-echo $(which fish) | tee -a /etc/shells
+echo $(which fish) | $SUDO tee -a /etc/shells
 chsh -s $(which fish) $(whoami) 
 
 # stow
