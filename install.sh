@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+set -euxo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 SUDO=''
@@ -9,14 +10,18 @@ if (( id -u )); then
 fi
 
 $SUDO apt-get update
-$SUDO apt-get install -y fish neovim stow tree git make
+$SUDO apt-get install -y fish zoxide direnv neovim stow tree git make
+
+# stow
+#stow -t ~ git
+stow -t ~/.config/fish fish
 
 # Fisher
 echo $(which fish) | $SUDO tee -a /etc/shells
-chsh -s $(which fish) $(whoami) 
+chsh -s $(which fish) $(whoami)
 
-# stow
-stow -t ~ git
-stow -t ~/.config/fish fish
-
-fish
+# fzf
+if [ ! -d ~/.fzf ]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/src/github.com/junegunn/fzf
+fi
+~/src/github.com/junegunn/fzf/install --all
