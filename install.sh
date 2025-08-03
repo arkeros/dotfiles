@@ -3,7 +3,7 @@ set -euxo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 SUDO=''
-if (( id -u )); then
+if [ "$(id -u)" -ne 0 ]; then
 	    SUDO='sudo'
 	    # Ask for the administrator password upfront
 	    sudo -v
