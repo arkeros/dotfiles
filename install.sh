@@ -19,7 +19,7 @@ stow -t ~/.config/fish fish
 
 # Fisher
 echo $(which fish) | $SUDO tee -a /etc/shells
-chsh -s $(which fish) $(whoami)
+$SUDO chsh -s $(which fish) $(whoami)
 
 # fzf
 if [ ! -d ~/.fzf ]; then
