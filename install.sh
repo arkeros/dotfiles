@@ -13,6 +13,7 @@ $SUDO apt-get update
 $SUDO apt-get install -y fish zoxide direnv neovim stow tree git make
 
 # stow
+mkdir -p ~/.config/fish
 #stow -t ~ git
 stow -t ~/.config/fish fish
 
